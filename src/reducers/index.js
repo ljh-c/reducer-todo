@@ -3,41 +3,49 @@ export const initialState = [
     item: 'Buy it',
     completed: false,
     id: 0,
+    completed_on: null
   },
   {
     item: 'Use it',
     completed: false,
-    id: 1
+    id: 1,
+    completed_on: null
   },
   {
     item: 'Break it',
     completed: false,
-    id: 2
+    id: 2,
+    completed_on: null
   },
   {
     item: 'Fix it',
     completed: false,
-    id: 3
+    id: 3,
+    completed_on: null
   },
   {
     item: 'Trash it',
     completed: false,
-    id: 4
+    id: 4,
+    completed_on: null
   },
   {
     item: 'Change it',
     completed: false,
-    id: 5
+    id: 5,
+    completed_on: null
   },
   {
     item: 'Mail',
     completed: false,
-    id: 6
+    id: 6,
+    completed_on: null
   },
   {
     item: 'Upgrade it',
     completed: false,
-    id: 7
+    id: 7,
+    completed_on: null
   }
 ];
 
@@ -47,14 +55,20 @@ export const taskReducer = (state, action) => {
       return [...state, {
         item: action.payload,
         completed: false,
-        id: Date.now()
+        id: Date.now(),
+        completed_on: null
       }];
 
-      case 'TOGGLE_COMPLETE':
-        return state.map(todo => {
-          if (todo.id === action.payload) return {...todo, completed: !todo.completed}
-          else return todo;
-        });
+    case 'TOGGLE_COMPLETED':
+      return state.map(todo => {
+        if (todo.id === action.payload) {
+          if (!todo.completed) return {...todo, completed: true, completed_on: Date.now()}
+          else return {...todo, completed: false, completed_on: null}
+        } else return todo;
+      });
+
+    case 'CLEAR_COMPLETED':
+      return state.filter(todo => !todo.completed);
 
     default:
       return state;

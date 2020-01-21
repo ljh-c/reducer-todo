@@ -15,6 +15,9 @@ function App() {
         <h1>Just To-Do It</h1>
         <TodoForm dispatch={dispatch} />
       </header>
+      <div className="actions">
+        <button onClick={() => dispatch({ type: 'CLEAR_COMPLETED' })}>Clear completed tasks</button>
+      </div>
       <TodoList tasks={tasks} dispatch={dispatch} />
     </div>
   );
