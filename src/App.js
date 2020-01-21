@@ -3,6 +3,7 @@ import './App.css';
 import { initialState, taskReducer } from './reducers';
 
 // components
+import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Just To-Do It</h1>
+        <TodoForm dispatch={dispatch} />
       </header>
       <TodoList tasks={tasks} />
     </div>
