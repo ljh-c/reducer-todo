@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'bootstrap.min.custom.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #333F48;
+  color: white;
+}
 
 .App {
   text-align: center;

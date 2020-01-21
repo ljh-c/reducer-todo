@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'reactstrap';
 
 function TodoForm({ dispatch }) {
   const [newTask, setNewTask] = useState('');
@@ -22,7 +23,7 @@ function TodoForm({ dispatch }) {
         value={newTask}
         onChange={handleChange}
       />
-      <button type="submit"><i className="material-icons">add</i></button>
+      <Button type="submit" color='primary'><strong>+</strong></Button>
     </form>
   );
 }

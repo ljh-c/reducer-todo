@@ -1,6 +1,7 @@
-import React, { useReducer } from 'react';
+import React, { useReducer } from 'react'
 import './App.css';
 import { initialState, taskReducer } from './reducers';
+import { Button } from 'reactstrap';
 
 // components
 import TodoForm from './components/TodoComponents/TodoForm';
@@ -16,7 +17,8 @@ function App() {
         <TodoForm dispatch={dispatch} />
       </header>
       <div className="actions">
-        <button onClick={() => dispatch({ type: 'CLEAR_COMPLETED' })}>Clear completed tasks</button>
+        <Button onClick={() => dispatch({ type: 'CLEAR_COMPLETED' })} color='secondary'>Clear completed tasks</Button>
+        <Button onClick={() => dispatch({ type: 'CLEAR_ALL' })} color='danger'>Clear ALL tasks</Button>
       </div>
       <TodoList tasks={tasks} dispatch={dispatch} />
     </div>

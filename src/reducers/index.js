@@ -72,6 +72,9 @@ export const taskReducer = (state, action) => {
     case 'CLEAR_COMPLETED':
       return state.filter(todo => !todo.completed);
 
+    case 'CLEAR_ALL':
+      return [];
+
     default:
       return state;
   }
