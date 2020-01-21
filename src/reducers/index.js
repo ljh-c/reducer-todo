@@ -1,42 +1,49 @@
 export const initialState = [
   {
-    task: 'Buy it',
+    item: 'Buy it',
     completed: false,
     id: 0,
   },
   {
-    task: 'Use it',
+    item: 'Use it',
     completed: false,
     id: 1
   },
   {
-    task: 'Break it',
+    item: 'Break it',
     completed: false,
     id: 2
   },
   {
-    task: 'Fix it',
+    item: 'Fix it',
     completed: false,
     id: 3
   },
   {
-    task: 'Trash it',
+    item: 'Trash it',
     completed: false,
     id: 4
   },
   {
-    task: 'Change it',
+    item: 'Change it',
     completed: false,
     id: 5
   },
   {
-    task: 'Mail',
+    item: 'Mail',
     completed: false,
     id: 6
   },
   {
-    task: 'Upgrade it',
+    item: 'Upgrade it',
     completed: false,
     id: 7
   }
 ];
+
+export const taskReducer = (state, action) => {
+  switch(action.type) {
+    default:
+      return state;
+  }
+};
