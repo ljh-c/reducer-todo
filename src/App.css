@@ -3,3 +3,8 @@
 .App {
   text-align: center;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: #5f6368;
+}

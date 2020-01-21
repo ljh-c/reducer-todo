@@ -22,7 +22,7 @@ function TodoForm({ dispatch }) {
         value={newTask}
         onChange={handleChange}
       />
-      <button type="submit"><i class="material-icons">add</i></button>
+      <button type="submit"><i className="material-icons">add</i></button>
     </form>
   );
 }

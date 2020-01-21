@@ -15,7 +15,7 @@ function App() {
         <h1>Just To-Do It</h1>
         <TodoForm dispatch={dispatch} />
       </header>
-      <TodoList tasks={tasks} />
+      <TodoList tasks={tasks} dispatch={dispatch} />
     </div>
   );
 }

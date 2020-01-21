@@ -50,6 +50,12 @@ export const taskReducer = (state, action) => {
         id: Date.now()
       }];
 
+      case 'TOGGLE_COMPLETE':
+        return state.map(todo => {
+          if (todo.id === action.payload) return {...todo, completed: !todo.completed}
+          else return todo;
+        });
+
     default:
       return state;
   }
