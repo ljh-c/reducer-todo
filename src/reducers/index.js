@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export const initialState = [
   {
     item: 'Buy it',
@@ -62,7 +64,7 @@ export const taskReducer = (state, action) => {
     case 'TOGGLE_COMPLETED':
       return state.map(todo => {
         if (todo.id === action.payload) {
-          if (!todo.completed) return {...todo, completed: true, completed_on: Date.now()}
+          if (!todo.completed) return {...todo, completed: true, completed_on: dayjs().format('M/D/YYYY')}
           else return {...todo, completed: false, completed_on: null}
         } else return todo;
       });
