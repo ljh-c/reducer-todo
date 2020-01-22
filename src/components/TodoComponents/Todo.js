@@ -1,18 +1,19 @@
 import React from 'react';
+import { Card, CardHeader, CardBody, CardText } from 'reactstrap';
 
 function Todo({ todo, dispatch }) {
   return (
-    <>
+    <Card>
     {todo.completed ? (
-      <div className="when-completed">
+      <CardHeader className="when-completed">
         Completed {todo.completed_on}
-      </div>
+      </CardHeader>
     ) : null}
-    <div className={todo.completed ? "completed" : null}
+      <CardBody className={todo.completed ? "completed" : null}
     onClick={() => dispatch({ type: 'TOGGLE_COMPLETED', payload: todo.id })}>
-      <p>{todo.item}</p>
-    </div>
-    </>
+        <CardText>{todo.item}</CardText>
+      </CardBody>
+    </Card>
   );
 }
 

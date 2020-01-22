@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'reactstrap';
+import { Button, InputGroup, Input, InputGroupAddon } from 'reactstrap';
 
 function TodoForm({ dispatch }) {
   const [newTask, setNewTask] = useState('');
@@ -17,13 +17,15 @@ function TodoForm({ dispatch }) {
 
   return (
     <form onSubmit={addTodo}>
-      <input
-        type="text"
-        placeholder="Add new task"
-        value={newTask}
-        onChange={handleChange}
-      />
-      <Button type="submit" color='primary'><strong>+</strong></Button>
+      <InputGroup>
+        <Input
+          type="text"
+          placeholder="Add new task"
+          value={newTask}
+          onChange={handleChange}
+        / >
+        <InputGroupAddon addonType="append"><Button type="submit" color="primary"><strong>+</strong></Button></InputGroupAddon>
+      </InputGroup>
     </form>
   );
 }
