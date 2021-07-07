@@ -1,0 +1,31 @@
+@import 'bootstrap.min.custom.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #333F48;
+}
+
+.App {
+  text-align: center;
+}
+
+header {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.actions > * {
+  margin: 0 0.75rem 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #5f6368;
+}
+
+.card {
+  max-width: 325px;
+  margin: 4px auto;
+}
